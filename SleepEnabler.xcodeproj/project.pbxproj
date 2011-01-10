@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32A4FEBC0562C75700D090E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		32A4FEBE0562C75700D090E7 /* SleepEnabler.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3CFF42312311CA2CB7 /* SleepEnabler.c */; settings = {ATTRIBUTES = (); }; };
+		CFF97AE110340D1000305EE2 /* SleepEnabler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF97ADF10340D1000305EE2 /* SleepEnabler.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A224C3CFF42312311CA2CB7 /* SleepEnabler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SleepEnabler.c; sourceTree = "<group>"; };
+		32A4FEC30562C75700D090E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32A4FEC40562C75800D090E7 /* SleepEnabler.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepEnabler.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC717EE511075A6100B54391 /* cpu_topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_topology.h; sourceTree = "<group>"; };
+		AC717EE611075A6100B54391 /* pmCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmCPU.h; sourceTree = "<group>"; };
+		AC77EFE910A9193D009E5718 /* cpu_topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_topology.h; sourceTree = "<group>"; };
+		AC77EFEA10A9193D009E5718 /* pmCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmCPU.h; sourceTree = "<group>"; };
+		CF0DB2FB10383E36006B0FED /* cpu_topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_topology.h; sourceTree = "<group>"; };
+		CF0DB2FC10383E36006B0FED /* pmCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmCPU.h; sourceTree = "<group>"; };
+		CF6D0E8D103359CF0012C18D /* pmCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmCPU.h; sourceTree = "<group>"; };
+		CF95DA4510334D8E0030C493 /* cpu_topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_topology.h; sourceTree = "<group>"; };
+		CFF97ADE10340D1000305EE2 /* SleepEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepEnabler.h; sourceTree = "<group>"; };
+		CFF97ADF10340D1000305EE2 /* SleepEnabler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SleepEnabler.cpp; sourceTree = "<group>"; };
+		D27513B306A6225300ADB3A4 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32A4FEBF0562C75700D090E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* SleepEnabler */ = {
+			isa = PBXGroup;
+			children = (
+				247142CAFF3F8F9811CA285C /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				D27513B306A6225300ADB3A4 /* Kernel.framework */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = SleepEnabler;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32A4FEC30562C75700D090E7 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32A4FEC40562C75800D090E7 /* SleepEnabler.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247142CAFF3F8F9811CA285C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AC717EE411075A6100B54391 /* Headers_10.3.0 */,
+				AC77EFE810A9193D009E5718 /* Headers_10.2.0 */,
+				CF0DB2FA10383E36006B0FED /* Headers_10.0.0 */,
+				CFF97AF410340F2B00305EE2 /* Headers_9.8.0 */,
+				CFF97AF310340F1C00305EE2 /* Headers_9.7.0 */,
+				1A224C3CFF42312311CA2CB7 /* SleepEnabler.c */,
+				CFF97ADE10340D1000305EE2 /* SleepEnabler.h */,
+				CFF97ADF10340D1000305EE2 /* SleepEnabler.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		AC717EE411075A6100B54391 /* Headers_10.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				AC717EE511075A6100B54391 /* cpu_topology.h */,
+				AC717EE611075A6100B54391 /* pmCPU.h */,
+			);
+			path = Headers_10.3.0;
+			sourceTree = "<group>";
+		};
+		AC77EFE810A9193D009E5718 /* Headers_10.2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				AC77EFE910A9193D009E5718 /* cpu_topology.h */,
+				AC77EFEA10A9193D009E5718 /* pmCPU.h */,
+			);
+			path = Headers_10.2.0;
+			sourceTree = "<group>";
+		};
+		CF0DB2FA10383E36006B0FED /* Headers_10.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				CF0DB2FB10383E36006B0FED /* cpu_topology.h */,
+				CF0DB2FC10383E36006B0FED /* pmCPU.h */,
+			);
+			path = Headers_10.0.0;
+			sourceTree = "<group>";
+		};
+		CFF97AF310340F1C00305EE2 /* Headers_9.7.0 */ = {
+			isa = PBXGroup;
+			children = (
+				CF95DA4510334D8E0030C493 /* cpu_topology.h */,
+				CF6D0E8D103359CF0012C18D /* pmCPU.h */,
+			);
+			path = Headers_9.7.0;
+			sourceTree = "<group>";
+		};
+		CFF97AF410340F2B00305EE2 /* Headers_9.8.0 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers_9.8.0;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32A4FEB80562C75700D090E7 /* SleepEnabler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91C308733DAC0010E9CD /* Build configuration list for PBXNativeTarget "SleepEnabler" */;
+			buildPhases = (
+				32A4FEBB0562C75700D090E7 /* Resources */,
+				32A4FEBD0562C75700D090E7 /* Sources */,
+				32A4FEBF0562C75700D090E7 /* Frameworks */,
+				32A4FEC00562C75700D090E7 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SleepEnabler;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = SleepEnabler;
+			productReference = 32A4FEC40562C75800D090E7 /* SleepEnabler.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91C708733DAC0010E9CD /* Build configuration list for PBXProject "SleepEnabler" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* SleepEnabler */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32A4FEB80562C75700D090E7 /* SleepEnabler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32A4FEBB0562C75700D090E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A4FEBC0562C75700D090E7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		32A4FEC00562C75700D090E7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32A4FEBD0562C75700D090E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A4FEBE0562C75700D090E7 /* SleepEnabler.c in Sources */,
+				CFF97AE110340D1000305EE2 /* SleepEnabler.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91C408733DAC0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1DEB91C808733DAC0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 9.8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		AC717EDA11075A0500B54391 /* Debug 10.6.3 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.3.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+			};
+			name = "Debug 10.6.3";
+		};
+		AC717EDB11075A0500B54391 /* Debug 10.6.3 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.3";
+		};
+		AC77EFDD10A91836009E5718 /* Debug 10.6.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.2.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+			};
+			name = "Debug 10.6.2";
+		};
+		AC77EFDE10A91836009E5718 /* Debug 10.6.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.2";
+		};
+		CF0DB2F410383DFC006B0FED /* Debug 10.6.0 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.0.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+			};
+			name = "Debug 10.6.0";
+		};
+		CF0DB2F510383DFC006B0FED /* Debug 10.6.0 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.0";
+		};
+		CFF97AEF10340E9A00305EE2 /* Debug 10.5.7 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 9.7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				USE_HEADERMAP = NO;
+			};
+			name = "Debug 10.5.7";
+		};
+		CFF97AF010340E9A00305EE2 /* Debug 10.5.7 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.5.7";
+		};
+		F541AA9012DB641300C11866 /* Debug 10.6.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Debug 10.6.4";
+		};
+		F541AA9112DB641300C11866 /* Debug 10.6.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.4";
+		};
+		F541AA9212DB641900C11866 /* Debug 10.6.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Debug 10.6.5";
+		};
+		F541AA9312DB641900C11866 /* Debug 10.6.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.5";
+		};
+		F541AAA612DB64BA00C11866 /* Release 10.6.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .hg .git .svn";
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Release 10.6.6";
+		};
+		F541AAA712DB64BA00C11866 /* Release 10.6.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6.6";
+		};
+		F5FACFC712DB5C23000665E5 /* Debug 10.6.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Debug 10.6.6";
+		};
+		F5FACFC812DB5C23000665E5 /* Debug 10.6.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.6";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91C308733DAC0010E9CD /* Build configuration list for PBXNativeTarget "SleepEnabler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91C408733DAC0010E9CD /* Debug */,
+				CFF97AF010340E9A00305EE2 /* Debug 10.5.7 */,
+				CF0DB2F510383DFC006B0FED /* Debug 10.6.0 */,
+				AC77EFDE10A91836009E5718 /* Debug 10.6.2 */,
+				AC717EDB11075A0500B54391 /* Debug 10.6.3 */,
+				F541AA9112DB641300C11866 /* Debug 10.6.4 */,
+				F541AA9312DB641900C11866 /* Debug 10.6.5 */,
+				F5FACFC812DB5C23000665E5 /* Debug 10.6.6 */,
+				F541AAA712DB64BA00C11866 /* Release 10.6.6 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug 10.6.6";
+		};
+		1DEB91C708733DAC0010E9CD /* Build configuration list for PBXProject "SleepEnabler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91C808733DAC0010E9CD /* Debug */,
+				CFF97AEF10340E9A00305EE2 /* Debug 10.5.7 */,
+				CF0DB2F410383DFC006B0FED /* Debug 10.6.0 */,
+				AC77EFDD10A91836009E5718 /* Debug 10.6.2 */,
+				AC717EDA11075A0500B54391 /* Debug 10.6.3 */,
+				F541AA9012DB641300C11866 /* Debug 10.6.4 */,
+				F541AA9212DB641900C11866 /* Debug 10.6.5 */,
+				F5FACFC712DB5C23000665E5 /* Debug 10.6.6 */,
+				F541AAA612DB64BA00C11866 /* Release 10.6.6 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug 10.6.6";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
