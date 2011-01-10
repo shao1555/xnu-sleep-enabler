@@ -13,7 +13,7 @@ Install
 -------
 under chameleon, you have to install /Extra/Extensions
 
-    sudo cp -rfv buid/Release\ 10.6.6/SleepEnabler.kext /Extra/Extensions/
+    sudo cp -rfv build/Release\ 10.6.6/SleepEnabler.kext /Extra/Extensions/
 
 after installation, you have to rebuild kextcache.
 
@@ -24,6 +24,8 @@ after installation, you have to rebuild kextcache.
     kextcache -v 1 -t -l -m /Extra/Extensions.mkext /Extra/Extensions /System/Library/Extensions
 
 or use kext utility :p
+
+no longer needs 'pmVersion=21' to boot arguments.
 
 Apply for future release
 ------------------------
