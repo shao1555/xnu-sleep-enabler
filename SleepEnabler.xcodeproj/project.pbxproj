@@ -480,7 +480,7 @@
 			};
 			name = "Debug 10.6.5";
 		};
-		F541AAA612DB64BA00C11866 /* Release 10.6.6 */ = {
+		F541AAA612DB64BA00C11866 /* Release 10.6.7 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -491,16 +491,16 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
-				KERNEL_VERSION = 10.6.0;
+				KERNEL_VERSION = 10.7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64";
 			};
-			name = "Release 10.6.6";
+			name = "Release 10.6.7";
 		};
-		F541AAA712DB64BA00C11866 /* Release 10.6.6 */ = {
+		F541AAA712DB64BA00C11866 /* Release 10.6.7 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -517,9 +517,9 @@
 				PRODUCT_NAME = SleepEnabler;
 				WRAPPER_EXTENSION = kext;
 			};
-			name = "Release 10.6.6";
+			name = "Release 10.6.7";
 		};
-		F5FACFC712DB5C23000665E5 /* Debug 10.6.6 */ = {
+		F5F337B31342355800D94018 /* Debug 10.6.6 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -538,7 +538,7 @@
 			};
 			name = "Debug 10.6.6";
 		};
-		F5FACFC812DB5C23000665E5 /* Debug 10.6.6 */ = {
+		F5F337B41342355800D94018 /* Debug 10.6.6 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -557,6 +557,44 @@
 			};
 			name = "Debug 10.6.6";
 		};
+		F5F337B51342355900D94018 /* Debug 10.6.7 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Headers_* *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Headers_${KERNEL_VERSION}";
+				KERNEL_VERSION = 10.7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Debug 10.6.7";
+		};
+		F5F337B61342355900D94018 /* Debug 10.6.7 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = sk.triaxis.kext.SleepEnabler;
+				MODULE_START = SleepEnabler_start;
+				MODULE_STOP = SleepEnabler_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = SleepEnabler;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug 10.6.7";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,11 +608,12 @@
 				AC717EDB11075A0500B54391 /* Debug 10.6.3 */,
 				F541AA9112DB641300C11866 /* Debug 10.6.4 */,
 				F541AA9312DB641900C11866 /* Debug 10.6.5 */,
-				F5FACFC812DB5C23000665E5 /* Debug 10.6.6 */,
-				F541AAA712DB64BA00C11866 /* Release 10.6.6 */,
+				F5F337B41342355800D94018 /* Debug 10.6.6 */,
+				F5F337B61342355900D94018 /* Debug 10.6.7 */,
+				F541AAA712DB64BA00C11866 /* Release 10.6.7 */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug 10.6.6";
+			defaultConfigurationName = "Debug 10.6.7";
 		};
 		1DEB91C708733DAC0010E9CD /* Build configuration list for PBXProject "SleepEnabler" */ = {
 			isa = XCConfigurationList;
@@ -586,11 +625,12 @@
 				AC717EDA11075A0500B54391 /* Debug 10.6.3 */,
 				F541AA9012DB641300C11866 /* Debug 10.6.4 */,
 				F541AA9212DB641900C11866 /* Debug 10.6.5 */,
-				F5FACFC712DB5C23000665E5 /* Debug 10.6.6 */,
-				F541AAA612DB64BA00C11866 /* Release 10.6.6 */,
+				F5F337B31342355800D94018 /* Debug 10.6.6 */,
+				F5F337B51342355900D94018 /* Debug 10.6.7 */,
+				F541AAA612DB64BA00C11866 /* Release 10.6.7 */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug 10.6.6";
+			defaultConfigurationName = "Debug 10.6.7";
 		};
 /* End XCConfigurationList section */
 	};

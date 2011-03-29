@@ -17,6 +17,7 @@
 #define PM_DISPATCH_VERSION_10_6_4		20
 #define PM_DISPATCH_VERSION_10_6_5		21
 #define PM_DISPATCH_VERSION_10_6_6		21
+#define PM_DISPATCH_VERSION_10_6_7		21
 #define PM_DISPATCH_VERSION_10_6_PLUS	version_minor + 16
 
 #include <pexpert/pexpert.h>
@@ -70,13 +71,17 @@ kern_return_t SleepEnabler_start (kmod_info_t * ki, void * d) {
 				case 6:		// 10.6.x kernel (10.6.6) = 21
 					dispatchVersion = PM_DISPATCH_VERSION_10_6_6;
 					break;
+
+				case 7:		// 10.7.x kernel (10.6.7) = 21
+					dispatchVersion = PM_DISPATCH_VERSION_10_6_7;
+					break;
 					
 				default:
 					if (PE_parse_boot_argn("pmIncrement", &pmInc, sizeof (pmInc)))
 					{
 						if(pmInc == 0) 
 						{
-							dispatchVersion = PM_DISPATCH_VERSION_10_6_6;	// lask known value
+							dispatchVersion = PM_DISPATCH_VERSION_10_6_7;	// least known value
 						}
 					}
 					break;
