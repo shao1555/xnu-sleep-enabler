@@ -1,19 +1,19 @@
 xnu-sleep-enabler
 =================
 
-add compatibility for 10.6.6 release
+add compatibility for 10.6.7 release
 
 Build
 -----
 to build, you must install Xcode and other utilities.
 
-    xcodebuild -configuration 'Release 10.6.6'
+    xcodebuild -configuration 'Release 10.6.7'
 
 Install
 -------
 under chameleon, you have to install /Extra/Extensions
 
-    sudo cp -rfv build/Release\ 10.6.6/SleepEnabler.kext /Extra/Extensions/
+    sudo cp -rfv build/Release\ 10.6.7/SleepEnabler.kext /Extra/Extensions/
 
 after installation, you have to rebuild kextcache.
 
